@@ -12,13 +12,61 @@
         <p>Created with HTML, CSS, and JavaScript</p>
     </header>
 
-    <section>
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
         <h2>About Me</h2>
         <p>Hi, I'm a web developer passionate about building awesome websites.</p>
     </section>
 
-    <footer>
+    <section id="education">
+        <h2>Education</h2>
+        <div class="education-item">
+            <h3>Bachelor of Science in Computer Science</h3>
+            <p>University Name, Year</p>
+            <button onclick="toggleDetails('edu1')">View Details</button>
+            <div id="edu1" class="details">
+                <p>Details about the degree, courses, and achievements.</p>
+            </div>
+        </div>
+        <!-- Add more education items as needed -->
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project 1</h3>
+            <p>Short description of project 1.</p>
+            <button onclick="toggleDetails('proj1')">View Details</button>
+            <div id="proj1" class="details">
+                <p>Detailed description of project 1, technologies used, and outcomes.</p>
+            </div>
+        </div>
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>Short description of project 2.</p>
+            <button onclick="toggleDetails('proj2')">View Details</button>
+            <div id="proj2" class="details">
+                <p>Detailed description of project 2, technologies used, and outcomes.</p>
+            </div>
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
         <p>Contact: myemail@example.com</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 My Portfolio</p>
     </footer>
 
     <script src="script.js"></script>
