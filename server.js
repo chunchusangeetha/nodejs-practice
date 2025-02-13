@@ -1,13 +1,19 @@
-const { createServer } = require('http');
-const hostname = '0.0.0.0';
-const port = 3000;
+const express = require('express');
+const path = require('path');
 
-const server = createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World\n');
+const app = express();
+const hostname = '0.0.0.0';
+const port = process.env.PORT || 3000;
+
+// Serve static files from "public" folder
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Route to serve index.html
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-server.listen(port, hostname, () => {
+// Start the server
+app.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
